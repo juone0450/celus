@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exclusividad Móvil - Ofertas Únicas</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Feather Icons for modern icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+    
+    <style>
+        /* Custom styles */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0a0a0a; /* A very dark gray, almost black */
+            color: #e5e7eb; /* Light gray for text */
+        }
+        .glass-effect {
+            background: rgba(17, 24, 39, 0.5); /* Semi-transparent dark background */
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .brand-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .brand-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(255, 215, 0, 0.1), 0 10px 10px -5px rgba(255, 215, 0, 0.04);
+        }
+        /* Animation for elements fading in on scroll */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .fade-in-element {
+            animation: fadeIn 0.8s ease-out forwards;
+        }
+        /* Gold gradient for buttons and highlights */
+        .gold-gradient-text {
+            background: linear-gradient(90deg, #ffd700, #f0c000);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+        }
+        .gold-gradient-bg {
+            background: linear-gradient(90deg, #ffd700, #f0c000);
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 z-50">
+        <nav class="container mx-auto px-6 py-4">
+             <div class="flex items-center justify-between glass-effect rounded-full px-6 py-3">
+                <a href="#" class="text-2xl font-bold text-white">Exclusividad<span class="gold-gradient-text">Móvil</span></a>
+                <a href="#contacto" class="hidden md:inline-block bg-gray-800 hover:bg-gray-700 text-white font-semibold py-2 px-4 rounded-full transition duration-300">
+                    Contacto
+                </a>
+             </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="min-h-screen flex items-center justify-center text-center bg-cover bg-center" style="background-image: linear-gradient(rgba(10, 10, 10, 0.8), rgba(10, 10, 10, 1)), url('https://raw.githubusercontent.com/juone0450/celus/main/fondo.png');">
+            <div class="container mx-auto px-6">
+                <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold text-white leading-tight mb-4">
+                    La Élite de la <span class="gold-gradient-text">Tecnología</span>
+                </h1>
+                <p class="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+                    Bienvenido a nuestro círculo exclusivo. Aquí, el acceso no es para todos. Te ofrecemos una selección curada de los celulares de más alta gama, antes que nadie.
+                </p>
+                <a href="#marcas" class="gold-gradient-bg text-gray-900 font-bold py-3 px-8 rounded-full text-lg hover:shadow-lg hover:shadow-yellow-500/30 transition-all duration-300 transform hover:scale-105">
+                    Descubrir Colección
+                </a>
+            </div>
+        </section>
+
+        <!-- Brands Section -->
+        <section id="marcas" class="py-20 md:py-32">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-white">Marcas de Prestigio</h2>
+                    <p class="text-gray-400 mt-2">Solo trabajamos con lo mejor de lo mejor.</p>
+                    <div class="w-24 h-1 gold-gradient-bg mx-auto mt-4 rounded"></div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-16 items-center">
+                    <!-- iPhone Card -->
+                    <div class="brand-card glass-effect p-8 rounded-2xl flex flex-col items-center text-center">
+                        <img src="https://evermobile.com.ar/wp-content/uploads/2024/09/Diseno-sin-titulo-7-450x450.png" 
+                             alt="Imagen de iPhone" 
+                             onerror="this.onerror=null;this.src='https://placehold.co/450x450/111827/ffffff?text=iPhone';"
+                             class="w-64 h-64 object-contain mb-6 rounded-lg">
+                        <h3 class="text-2xl font-bold text-white mb-2">Apple iPhone</h3>
+                        <p class="text-gray-400">Diseño, potencia y un ecosistema incomparable. La vanguardia de la innovación en tus manos.</p>
+                    </div>
+
+                    <!-- Samsung Card -->
+                    <div class="brand-card glass-effect p-8 rounded-2xl flex flex-col items-center text-center">
+                        <img src="https://everydaynature.com.ar/wp-content/uploads/samsung-s25-ultra-512-gb.jpg" 
+                             alt="Imagen de Samsung Galaxy"
+                             onerror="this.onerror=null;this.src='https://placehold.co/450x450/111827/ffffff?text=Samsung';"
+                             class="w-64 h-64 object-contain mb-6 rounded-lg">
+                        <h3 class="text-2xl font-bold text-white mb-2">Samsung Galaxy</h3>
+                        <p class="text-gray-400">La máxima expresión de la versatilidad y la tecnología de pantalla. Rompiendo los límites de lo posible.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Contact Section -->
+        <section id="contacto" class="py-20 md:py-32 bg-gray-900/50">
+            <div class="container mx-auto px-6 text-center">
+                 <h2 class="text-3xl md:text-4xl font-bold text-white">Únete a la Lista Exclusiva</h2>
+                 <p class="text-gray-400 mt-2 max-w-2xl mx-auto">Recibe acceso prioritario a lanzamientos, ofertas especiales y eventos privados. Ingresa tu email para ser considerado.</p>
+                 <div class="mt-8 max-w-md mx-auto flex">
+                    <input type="email" placeholder="tu.email@ejemplo.com" class="w-full bg-gray-800 border border-gray-700 text-white rounded-l-full px-6 py-3 focus:outline-none focus:ring-2 focus:ring-yellow-500">
+                    <button class="gold-gradient-bg text-gray-900 font-bold py-3 px-6 rounded-r-full hover:shadow-lg hover:shadow-yellow-500/30 transition-all duration-300">
+                        Suscribirme
+                    </button>
+                 </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-black py-8">
+        <div class="container mx-auto px-6 text-center text-gray-500">
+            <p>&copy; 2025 Exclusividad Móvil. Todos los derechos reservados.</p>
+            <p class="mt-2">Diseñado por <a href="https://jmb-138.github.io/puff/" target="_blank" rel="noopener noreferrer" class="text-yellow-400 hover:text-yellow-300 transition duration-300 font-semibold">PUFF Studios</a></p>
+        </div>
+    </footer>
+    
+    <script>
+        // Script to add feather icons
+        feather.replace();
+        
+        // Simple scroll animation observer
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in-element');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('section > div').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+
+</body>
+</html>
